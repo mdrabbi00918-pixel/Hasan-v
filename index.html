@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Private Video Call Service - Simple and affordable video call packages.">
+  <meta name="theme-color" content="#ff3d81">
+  <title>Video Call Service 💗</title>
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,"Noto Sans Bengali",sans-serif;background:#fff5f8;color:#222;line-height:1.6}
+
+    header{
+      background:linear-gradient(135deg,#ff3d81,#ff6b9d);
+      color:white;padding:18px 6%;position:sticky;top:0;z-index:1000;
+      box-shadow:0 4px 20px rgba(0,0,0,.12)
+    }
+    .nav{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center}
+    .logo{font-size:22px;font-weight:bold}
+    .nav a{color:white;text-decoration:none;font-weight:bold;margin-left:18px}
+
+    .hero{
+      min-height:520px;display:flex;align-items:center;justify-content:center;text-align:center;
+      padding:70px 20px;
+      background:radial-gradient(circle at top right,#ffd1df,transparent 35%),linear-gradient(135deg,#fff5f8,#ffe4ed)
+    }
+    .hero-content{max-width:800px}
+    .heart{font-size:55px;animation:heartbeat 1.4s infinite}
+    @keyframes heartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+    .hero h1{font-size:46px;margin:10px 0;color:#e91e63}
+    .hero p{font-size:19px;color:#555;margin-bottom:28px}
+
+    .btn{
+      display:inline-block;padding:13px 25px;border-radius:50px;text-decoration:none;color:white;
+      background:#ff3d81;font-weight:bold;margin:5px;transition:.3s;
+      box-shadow:0 7px 20px rgba(255,61,129,.25)
+    }
+    .btn:hover{transform:translateY(-3px);background:#e91e63}
+    .telegram-btn{background:#229ed9;box-shadow:0 7px 20px rgba(34,158,217,.25)}
+    .telegram-btn:hover{background:#168ac1}
+
+    section{padding:70px 6%}
+    .container{max-width:1100px;margin:auto}
+    .section-title{text-align:center;margin-bottom:40px}
+    .section-title h2{font-size:34px;color:#e91e63}
+    .section-title p{color:#777;margin-top:5px}
+
+    .pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:22px}
+    .card{
+      background:white;border-radius:22px;padding:28px 20px;text-align:center;
+      box-shadow:0 8px 30px rgba(0,0,0,.08);border:1px solid #ffe0ea;
+      transition:.3s;position:relative;overflow:hidden
+    }
+    .card:hover{transform:translateY(-8px);box-shadow:0 15px 35px rgba(0,0,0,.12)}
+    .card.featured{border:2px solid #ff3d81}
+    .popular{position:absolute;top:12px;right:-35px;background:#ff3d81;color:white;padding:5px 40px;font-size:12px;transform:rotate(35deg)}
+    .card .icon{font-size:38px;margin-bottom:10px}
+    .card h3{font-size:23px;margin-bottom:8px}
+    .price{font-size:34px;font-weight:bold;color:#e91e63;margin:12px 0}
+    .price span{font-size:15px;color:#777;font-weight:normal}
+    .order-btn{display:block;background:#ff3d81;color:white;padding:11px;border-radius:12px;text-decoration:none;font-weight:bold;margin-top:18px}
+    .order-btn:hover{background:#e91e63}
+
+    .features{background:white}
+    .feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+    .feature{padding:25px;background:#fff5f8;border-radius:18px;text-align:center}
+    .feature-icon{font-size:35px;margin-bottom:10px}
+    .feature h3{margin-bottom:7px}
+
+    /* Photo Gallery */
+    .gallery-section{background:linear-gradient(135deg,#fff5f8,#ffe8f0)}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}
+    .gallery-item{
+      position:relative;height:290px;overflow:hidden;border-radius:22px;background:#fff;
+      box-shadow:0 8px 25px rgba(0,0,0,.10);cursor:pointer;border:2px solid #ffe0ea;transition:.35s
+    }
+    .gallery-item:hover{transform:translateY(-7px);box-shadow:0 15px 35px rgba(233,30,99,.20)}
+    .gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:.45s}
+    .gallery-item:hover img{transform:scale(1.08)}
+    .gallery-overlay{
+      position:absolute;left:0;right:0;bottom:0;padding:35px 15px 15px;color:white;text-align:center;
+      background:linear-gradient(transparent,rgba(0,0,0,.7));font-weight:bold
+    }
+
+    /* Work With Us */
+    .work-section{background:white}
+    .work-box{
+      max-width:850px;margin:auto;text-align:center;padding:42px 28px;border-radius:28px;
+      background:linear-gradient(135deg,#fff0f5,#ffe0eb);
+      border:2px solid #ffd1df;box-shadow:0 12px 35px rgba(233,30,99,.10)
+    }
+    .work-icon{font-size:55px;margin-bottom:10px}
+    .work-box h3{font-size:30px;color:#e91e63;margin-bottom:10px}
+    .work-box p{color:#555;max-width:650px;margin:0 auto 22px}
+    .work-list{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;
+      margin:22px 0;text-align:left
+    }
+    .work-list div{background:white;padding:13px 15px;border-radius:14px;color:#444}
+    .work-list span{margin-right:7px}
+
+    .contact-box{
+      max-width:700px;margin:auto;background:white;padding:35px 25px;border-radius:25px;text-align:center;
+      box-shadow:0 8px 30px rgba(0,0,0,.08)
+    }
+    .contact-item{margin:18px 0;font-size:18px}
+    .contact-item strong{display:block;margin-bottom:5px}
+
+    footer{background:#21151b;color:#ddd;text-align:center;padding:30px 20px}
+    footer strong{color:#ff6b9d}
+
+    /* Image popup */
+    .lightbox{
+      display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:10000;
+      align-items:center;justify-content:center;padding:20px
+    }
+    .lightbox img{max-width:95%;max-height:86vh;border-radius:18px;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+    .lightbox-close{position:absolute;top:18px;right:25px;color:white;font-size:42px;cursor:pointer;line-height:1}
+
+    .floating-whatsapp{
+      position:fixed;right:18px;bottom:18px;width:58px;height:58px;border-radius:50%;
+      background:#25D366;color:white;display:flex;align-items:center;justify-content:center;
+      text-decoration:none;font-size:28px;box-shadow:0 5px 20px rgba(0,0,0,.2);z-index:9999
+    }
+
+    @media(max-width:650px){
+      .nav{flex-direction:column;gap:8px}
+      .nav a{margin:0 7px;font-size:14px}
+      .hero{min-height:450px;padding:50px 18px}
+      .hero h1{font-size:34px}
+      .hero p{font-size:16px}
+      section{padding:55px 5%}
+      .section-title h2{font-size:28px}
+      .gallery{grid-template-columns:repeat(2,1fr);gap:12px}
+      .gallery-item{height:230px;border-radius:16px}
+      .work-box{padding:32px 18px}
+      .work-box h3{font-size:25px}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">💗 Video Call Service</div>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#packages">Packages</a>
+      <a href="#gallery">Photos</a>
+      <a href="#work">কাজ করতে চাই</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="heart">💗</div>
+    <h1>Private Video Call Service</h1>
+    <p>আপনার পছন্দের সময় অনুযায়ী প্রাইভেট ভিডিও কল প্যাকেজ বেছে নিন। সহজ রেট, দ্রুত যোগাযোগ।</p>
+    <a class="btn" href="#packages">📦 Packages দেখুন</a>
+    <a class="btn" href="https://wa.me/8801887928771?text=আমি%20ভিডিও%20কল%20সার্ভিস%20নিতে%20চাই।" target="_blank">💬 WhatsApp</a>
+  </div>
+</section>
+
+<section id="packages">
+  <div class="container">
+    <div class="section-title">
+      <h2>💗 Video Call Packages</h2>
+      <p>আপনার পছন্দের প্যাকেজ নির্বাচন করুন</p>
+    </div>
+
+    <div class="pricing">
+      <div class="card">
+        <div class="icon">📱</div><h3>১০ মিনিট</h3>
+        <div class="price">৳৫০ <span>/ 10 মিনিট</span></div>
+        <a class="order-btn" href="https://wa.me/8801887928771?text=আমি%20১০%20মিনিটের%20প্যাকেজ%20নিতে%20চাই।" target="_blank">Order Now</a>
+      </div>
+
+      <div class="card">
+        <div class="icon">💗</div><h3>১৫ মিনিট</h3>
+        <div class="price">৳২৫০ <span>/ 15 মিনিট</span></div>
+        <a class="order-btn" href="https://wa.me/8801887928771?text=আমি%20১৫%20মিনিটের%20প্যাকেজ%20নিতে%20চাই।" target="_blank">Order Now</a>
+      </div>
+
+      <div class="card featured">
+        <div class="popular">POPULAR</div>
+        <div class="icon">🔥</div><h3>২০ মিনিট</h3>
+        <div class="price">৳৩৫০ <span>/ 20 মিনিট</span></div>
+        <a class="order-btn" href="https://wa.me/8801887928771?text=আমি%20২০%20মিনিটের%20প্যাকেজ%20নিতে%20চাই।" target="_blank">Order Now</a>
+      </div>
+
+      <div class="card">
+        <div class="icon">⭐</div><h3>৩০ মিনিট</h3>
+        <div class="price">৳৫৫০ <span>/ 30 মিনিট</span></div>
+        <a class="order-btn" href="https://wa.me/8801887928771?text=আমি%20৩০%20মিনিটের%20প্যাকেজ%20নিতে%20চাই।" target="_blank">Order Now</a>
+      </div>
+
+      <div class="card">
+        <div class="icon">👑</div><h3>৬০ মিনিট</h3>
+        <div class="price">৳১১০০ <span>/ 60 মিনিট</span></div>
+        <a class="order-btn" href="https://wa.me/8801887928771?text=আমি%20৬০%20মিনিটের%20প্যাকেজ%20নিতে%20চাই।" target="_blank">Order Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-section" id="gallery">
+  <div class="container">
+    <div class="section-title">
+      <h2>📸 Photo Gallery</h2>
+      <p>আমাদের কিছু ছবি</p>
+    </div>
+
+    <div class="gallery">
+      <div class="gallery-item" onclick="openImage('images/photo1.jpg')">
+        <img src="images/photo1.jpg" alt="Gallery Photo 1" loading="lazy">
+        <div class="gallery-overlay">💗 Special Moment</div>
+      </div>
+
+      <div class="gallery-item" onclick="openImage('images/photo2.jpg')">
+        <img src="images/photo2.jpg" alt="Gallery Photo 2" loading="lazy">
+        <div class="gallery-overlay">✨ Beautiful Moment</div>
+      </div>
+
+      <div class="gallery-item" onclick="openImage('images/photo3.jpg')">
+        <img src="images/photo3.jpg" alt="Gallery Photo 3" loading="lazy">
+        <div class="gallery-overlay">🌸 Photo Collection</div>
+      </div>
+
+      <div class="gallery-item" onclick="openImage('images/photo4.jpg')">
+        <img src="images/photo4.jpg" alt="Gallery Photo 4" loading="lazy">
+        <div class="gallery-overlay">💖 Premium Service</div>
+      </div>
+
+      <div class="gallery-item" onclick="openImage('images/photo5.jpg')">
+        <img src="images/photo5.jpg" alt="Gallery Photo 5" loading="lazy">
+        <div class="gallery-overlay">⭐ Featured</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="work-section" id="work">
+  <div class="container">
+    <div class="section-title">
+      <h2>💼 আমি কাজ করতে চাই</h2>
+      <p>আমাদের সাথে কাজ করতে আগ্রহী?</p>
+    </div>
+
+    <div class="work-box">
+      <div class="work-icon">💗</div>
+      <h3>আমি কাজ করতে চাই</h3>
+      <p>
+        আপনি যদি আমাদের সাথে কাজ করতে আগ্রহী হন, তাহলে বিস্তারিত জানতে WhatsApp অথবা Telegram-এ যোগাযোগ করুন।
+      </p>
+
+      <div class="work-list">
+        <div><span>⏰</span> নিজের সুবিধামতো সময়</div>
+        <div><span>📱</span> অনলাইন ভিত্তিক কাজ</div>
+        <div><span>💬</span> সহজ যোগাযোগ</div>
+        <div><span>🔒</span> গোপনীয়তা ও সম্মান</div>
+      </div>
+
+      <a class="btn" href="https://wa.me/8801887928771?text=আমি%20আপনাদের%20সাথে%20কাজ%20করতে%20চাই।%20বিস্তারিত%20জানতে%20চাই।" target="_blank">
+        💬 WhatsApp-এ যোগাযোগ
+      </a>
+
+      <a class="btn telegram-btn" href="https://t.me/Sumaiyap0087" target="_blank">
+        ✈️ Telegram
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="container">
+    <div class="section-title">
+      <h2>✨ আমাদের সার্ভিস</h2>
+      <p>সহজ ও দ্রুত যোগাযোগের সুবিধা</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature"><div class="feature-icon">🔒</div><h3>Private Call</h3><p>ব্যক্তিগত ভিডিও কলের জন্য নির্ধারিত সময়ের প্যাকেজ।</p></div>
+      <div class="feature"><div class="feature-icon">⚡</div><h3>Quick Response</h3><p>WhatsApp অথবা Telegram-এর মাধ্যমে যোগাযোগ করুন।</p></div>
+      <div class="feature"><div class="feature-icon">💰</div><h3>Simple Rate</h3><p>বিভিন্ন সময়ের জন্য পরিষ্কার ও সহজ প্যাকেজ রেট।</p></div>
+      <div class="feature"><div class="feature-icon">💗</div><h3>Friendly Service</h3><p>আপনার পছন্দের প্যাকেজ নির্বাচন করে যোগাযোগ করুন।</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="section-title">
+      <h2>📞 যোগাযোগ করুন</h2>
+      <p>প্যাকেজ নিতে নিচের যেকোনো মাধ্যমে যোগাযোগ করুন</p>
+    </div>
+
+    <div class="contact-box">
+      <div class="contact-item">
+        <strong>💬 WhatsApp</strong>
+        <p>01887928771</p>
+        <a class="btn" href="https://wa.me/8801887928771" target="_blank">WhatsApp Chat</a>
+      </div>
+
+      <div class="contact-item">
+        <strong>✈️ Telegram</strong>
+        <p>01893893498</p>
+        <p>@Sumaiyap0087</p>
+        <a class="btn telegram-btn" href="https://t.me/Sumaiyap0087" target="_blank">Telegram Chat</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 <strong>Video Call Service</strong> — All Rights Reserved.</p>
+  <p style="margin-top:8px;font-size:13px;">Private video call service • 18+ only</p>
+</footer>
+
+<a class="floating-whatsapp" href="https://wa.me/8801887928771" target="_blank" aria-label="WhatsApp">💬</a>
+
+<!-- Image Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeImage()">
+  <span class="lightbox-close">&times;</span>
+  <img id="lightbox-img" src="" alt="Preview" onclick="event.stopPropagation()">
+</div>
+
+<script>
+  function openImage(image){
+    document.getElementById("lightbox-img").src = image;
+    document.getElementById("lightbox").style.display = "flex";
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeImage(){
+    document.getElementById("lightbox").style.display = "none";
+    document.body.style.overflow = "";
+  }
+
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape") closeImage();
+  });
+</script>
+
+</body>
+</html>
